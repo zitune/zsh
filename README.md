@@ -12,6 +12,6 @@ Install
 
 * Link configuration
 
-  ln -s zshrc ~/.zshrc
+  ln -s $PWD/zshrc ~/.zshrc
 
-  for i in `ls custom`; do ln -s custom/$i ~/.oh-my-zsh/custom/$i
+  for i in `ls custom`; do ln -s $PWD/custom/$i ~/.oh-my-zsh/custom/$i; done
