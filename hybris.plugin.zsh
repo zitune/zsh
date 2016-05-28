@@ -42,5 +42,3 @@ export SAVEHIST=5000
 export WATCH=all
 export WATCHFMT="%n has %a %l from %M"
 
-# dir colors
-eval `dircolors $HOME/.zsh/dir-colors`
