@@ -19,9 +19,9 @@ antigen bundles <<EOBUNDLES
     zsh_reload
 
     # local
-    $HOME/.zsh --no-local-clone
+    hybris42/zsh
 EOBUNDLES
 
-antigen theme $HOME/.zsh/hybris.zsh-theme
+antigen theme hybris42/zsh hybris
 
 antigen apply
