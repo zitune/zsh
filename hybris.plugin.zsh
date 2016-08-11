@@ -27,7 +27,6 @@ fi
 alias j=jump
 alias dnsfix="sudo service bind9 restart"
 alias open_ports="sudo netstat -tulpen 2> /dev/null | grep LISTEN"
-alias offlineimap="/usr/bin/screen -list offlineimap > /dev/null || /usr/bin/screen -d -m -S offlineimap offlineimap"
 cless() {for a in $@; do colorize_via_pygmentize $a | less; done}
 r() {if [ $# -eq 1 ]; then ssh root@$1; else sudo su -; fi}
 health() {/usr/bin/screen -O -S health -c ~/.config/screen_health}
@@ -47,3 +46,9 @@ export WATCH=all
 export WATCHFMT="%n has %a %l from %M"
 
 grep "^Subject: " /var/spool/mail/hybris | sed 's/^Subject: / * /'
+
+# Google Cloud
+# The next line updates PATH for the Google Cloud SDK.
+source '/home/hybris/dev/bearstech/google-cloud-sdk/path.zsh.inc'
+# The next line enables shell command completion for gcloud.
+source '/home/hybris/dev/bearstech/google-cloud-sdk/completion.zsh.inc'
