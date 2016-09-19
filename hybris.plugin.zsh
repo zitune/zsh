@@ -30,6 +30,7 @@ alias open_ports="sudo netstat -tulpen 2> /dev/null | grep LISTEN"
 cless() {for a in $@; do colorize_via_pygmentize $a | less; done}
 r() {if [ $# -eq 1 ]; then ssh root@$1; else sudo su -; fi}
 health() {/usr/bin/screen -O -S health -c ~/.config/screen_health}
+loop() {while [ 1 ]; do $@; done}
 
 # Some exports
 export EDITOR=emacsclient

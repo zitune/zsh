@@ -1,6 +1,7 @@
-source /usr/share/zsh-antigen/antigen.zsh
+source /home/hybris/.antigen/antigen/antigen.zsh
 
 antigen use oh-my-zsh
+
 
 antigen bundles <<EOBUNDLES
     # omz
