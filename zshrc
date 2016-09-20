@@ -1,7 +1,7 @@
 source $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-antigen.git/antigen.zsh
 
 antigen use oh-my-zsh
-
+antigen bundle zsh-users/antigen
 
 antigen bundles <<EOBUNDLES
     # omz
