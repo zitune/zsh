@@ -1,4 +1,4 @@
-source /home/hybris/.antigen/antigen/antigen.zsh
+source $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-antigen.git/antigen.zsh
 
 antigen use oh-my-zsh
 
