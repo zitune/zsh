@@ -3,7 +3,8 @@ zsh
 
 Zsh configuration using antigen. Clone in ~/.zsh and do
 
-```$ cd /tmp/
+```
+$ cd /tmp/
 $ git clone https://github.com/zsh-users/antigen.git
 $ cd antigen
 $ source antigen.zsh
