@@ -1,6 +1,6 @@
 # bip at command end
 function precmd() {echo -n -e "\a"}
-function preexec() {print -Pn "\e]0;\a"}
+# function preexec() {print -Pn "\e]0;\a"}
 
 # do not share history between terms...
 unsetopt share_history
