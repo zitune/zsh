@@ -1,28 +1,29 @@
-source $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-antigen.git/antigen.zsh
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
 
-antigen use oh-my-zsh
-antigen bundle zsh-users/antigen
+# if the init scipt doesn't exist
+if ! zgen saved; then
 
-antigen bundles <<EOBUNDLES
-    # omz
-    colored-man-pages
-    colorize
-    copydir
-    copyfile
-    extract
-    git
-    jump
-    rsync
-    ssh-agent
-    systemadmin
-    web-search
-    z
-    zsh_reload
+  # specify plugins here
+  zgen oh-my-zsh
+  zgen oh-my-zsh plugins/colored-man-pages
+  zgen oh-my-zsh plugins/colorize
+  zgen oh-my-zsh plugins/copydir
+  zgen oh-my-zsh plugins/copyfile
+  zgen oh-my-zsh plugins/extract
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/jump
+  zgen oh-my-zsh plugins/rsync
+  zgen oh-my-zsh plugins/ssh-agent
+  zgen oh-my-zsh plugins/systemadmin
+  zgen oh-my-zsh plugins/web-search
+  zgen oh-my-zsh plugins/z
+  zgen oh-my-zsh plugins/zsh_reload
 
-    # local
-    hybris42/zsh
-EOBUNDLES
+  # personnal configuration
+  zgen load hybris42/zsh hybris.plugin.zsh
+  zgen load hybris42/zsh hybris.zsh-theme
 
-antigen theme hybris42/zsh hybris
-
-antigen apply
+  # generate the init script from plugins above
+  zgen save
+fi
