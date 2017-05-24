@@ -14,6 +14,3 @@ vpn-bear() {for i in $(nmcli con | grep vpn | grep -v -- -- | cut -d' ' -f1); do
 source '/home/hybris/dev/bearstech/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
 source '/home/hybris/dev/bearstech/google-cloud-sdk/completion.zsh.inc'
-
-# OVH
-source '/home/hybris/dev/bearstech/ovh.sh'
