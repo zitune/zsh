@@ -12,7 +12,7 @@ j()		{jump $@}
 loop()		{while [ 1 ]; do sh -c "$@"; done}
 open_ports()	{sudo netstat -tulpen 2> /dev/null | grep "LISTEN"}
 r()		{if [ $# -eq 1 ]; then ssh root@$1; else sudo su -; fi}
-dontknow()      {echo -n "¯\\_(ツ)_/¯" | xclip}
+dontknow()      {echo -n "¯\_(ツ)_/¯" | xclip}
 
 
 # Some exports
