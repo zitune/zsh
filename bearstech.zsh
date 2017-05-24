@@ -17,4 +17,4 @@ source '/home/hybris/dev/bearstech/google-cloud-sdk/completion.zsh.inc'
 
 # OVH cloud
 nova-env()      {source $INFRA/cloud/ovh-$1.env}
-nova-list()     {ls $INFRA/cloud/ovh-*.env | sed "s@$INFRA/cloud/ovh-\(.*\).env@\1@}
+nova-list()     {ls $INFRA/cloud/ovh-*.env | sed "s@$INFRA/cloud/ovh-\(.*\).env@\1@"}
