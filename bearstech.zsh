@@ -4,6 +4,7 @@ export PATH=$INFRA/bin:$INFRA/../xen:$PATH
 
 # Everyday aliases
 bthost()   {cat $INFRA/host/$1}
+bteach()   {$INFRA/bin/foreach $@}
 dom0()     {awk '/Container:/{ print $2}' ${INFRA}/host/${1}}
 alerts()   {ssh root@pidou monshow | grep -v "none$" | grep -v "^     " | grep -v "^$"}
 tickets()  {curl "https://maudin:$(/home/hybris/.scripts/keepcli -p Dashbeard)@dashbeard.bearstech.com/api/dashbeard.txt"}
