@@ -7,7 +7,7 @@ bt-alerts()     {ssh root@pidou monshow | grep -v "none$" | grep -v "^     " | g
 bt-dom0()       {awk '/Container:/{ print $2}' ${INFRA}/host/${1}}
 bt-each()       {$INFRA/bin/foreach $@}
 bt-host()       {cat $INFRA/host/$1}
-bt-tickets()    {curl "https://maudin:$(/home/hybris/.scripts/keepcli -p Dashbeard)@dashbeard.bearstech.com/api/dashbeard.txt"}
+bt-tickets()    {echo "Tickets:$(curl -s "https://maudin:$(/home/hybris/.scripts/keepcli -p Dashbeard)@dashbeard.bearstech.com/api/dashbeard.txt")"}
 bt-vpn()        {for i in $(nmcli con | grep vpn | grep -v -- -- | cut -d' ' -f1); do nmcli con down $i; done; nmcli con up bearstech}
 
 # Google Cloud
