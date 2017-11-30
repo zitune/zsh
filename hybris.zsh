@@ -15,8 +15,8 @@ r()		{if [ $# -eq 1 ]; then ssh root@$1; else sudo su -; fi}
 dontknow()      {echo -n "¯\\_(ツ)_/¯" | xclip}
 
 # Usefull bindings
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
+bindkey "^[Od" backward-word
+bindkey "^[Oc" forward-word
 
 # Some exports
 export EDITOR=emacsclient
