@@ -4,6 +4,9 @@ function precmd() {echo -n -e "\a"}
 # do not share history between terms...
 unsetopt share_history
 
+# Load keychain
+keychain -q
+
 # Everyday aliases
 cless()		{for a in $@; do colorize_via_pygmentize $a | less; done}
 e()		{emacsclient -n $@ > /dev/null 2>&1}
@@ -27,4 +30,3 @@ export PATH=$HOME/.scripts:$PATH
 export READNULLCMD=${PAGER:-/usr/bin/pager}
 export WATCH=all
 export WATCHFMT="%n has %a %l from %M"
-
