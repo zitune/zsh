@@ -12,7 +12,6 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/jump
   zgen oh-my-zsh plugins/rsync
-  zgen oh-my-zsh plugins/ssh-agent
   zgen oh-my-zsh plugins/systemadmin
   zgen oh-my-zsh plugins/z
 
