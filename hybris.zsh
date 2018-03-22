@@ -11,7 +11,7 @@ keychain -q --agents ssh id_rsa id_dsa
 cless()		{for a in $@; do colorize_via_pygmentize $a | less; done}
 e()		{emacsclient -n $@ > /dev/null 2>&1}
 health()	{/usr/bin/screen -O -S health -c ~/.config/screen_health}
-j()		{jump $@}
+j()		{if [ $# -eq 0 ]; then marks; else jump $@; fi}
 loop()		{while [ 1 ]; do sh -c "$@"; done}
 open_ports()	{sudo netstat -tulpen 2> /dev/null | grep "LISTEN"}
 r()		{if [ $# -eq 1 ]; then ssh root@$1; else sudo su -; fi}
