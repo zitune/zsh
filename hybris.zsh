@@ -34,4 +34,3 @@ export WATCHFMT="%n has %a %l from %M"
 
 # Some completions
 compctl -K _completemarks    j
-compctl -K _complete_bt-host r

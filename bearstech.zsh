@@ -25,4 +25,5 @@ _complete_nova-env()  {reply=($(ls $INFRA/cloud/ovh-*.env | sed "s@$INFRA/cloud/
 compctl -K _complete_bt-host  bt-dom0
 compctl -K _complete_bt-host  bt-host
 compctl -K _complete_bt-host  bt-release
+compctl -K _complete_bt-host  r
 compctl -K _complete_nova-env nova-env
