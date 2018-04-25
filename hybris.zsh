@@ -8,8 +8,8 @@ unsetopt share_history
 keychain -q --agents ssh id_rsa id_dsa
 
 # Everyday aliases
-ccat()		{for a in $@; do colorize_via_pygmentize $a; done}
-cless()		{for a in $@; do colorize_via_pygmentize $a | less; done}
+c-cat()		{for a in $@; do colorize_via_pygmentize $a; done}
+c-less()	{for a in $@; do colorize_via_pygmentize $a | less; done}
 e()		{emacsclient -n $@ > /dev/null 2>&1}
 health()	{/usr/bin/screen -O -S health -c ~/.config/screen_health}
 j()		{if [ $# -eq 0 ]; then marks; else jump $@; fi}
