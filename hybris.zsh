@@ -8,6 +8,7 @@ unsetopt share_history
 keychain -q --agents ssh id_rsa id_dsa
 
 # Everyday aliases
+ccat()		{for a in $@; do colorize_via_pygmentize $a; done}
 cless()		{for a in $@; do colorize_via_pygmentize $a | less; done}
 e()		{emacsclient -n $@ > /dev/null 2>&1}
 health()	{/usr/bin/screen -O -S health -c ~/.config/screen_health}
@@ -32,4 +33,5 @@ export WATCH=all
 export WATCHFMT="%n has %a %l from %M"
 
 # Some completions
-compctl -K _completemarks j
+compctl -K _completemarks    j
+compctl -K _complete_bt-host r
