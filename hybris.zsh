@@ -17,7 +17,7 @@ loop()		{while [ 1 ]; do sh -c "$@"; done}
 open_ports()	{sudo netstat -tulpen 2> /dev/null | grep "LISTEN"}
 r()		{if [ $# -eq 1 ]; then ssh root@$1; else sudo su -; fi}
 dontknow()      {echo -n "¯\\_(ツ)_/¯" | xclip}
-default-path()  {echo "default_path = '$PWD'" | awesome-client}
+d()             {echo "default_path = '$PWD'" | awesome-client}
 
 # Usefull bindings
 bindkey "^[Od" backward-word
