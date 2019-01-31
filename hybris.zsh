@@ -18,6 +18,7 @@ open_ports()	{sudo netstat -tulpen 2> /dev/null | grep "LISTEN"}
 r()		{if [ $# -eq 1 ]; then ssh root@$1; else sudo su -; fi}
 dontknow()      {echo -n "¯\\_(ツ)_/¯" | xclip}
 def()           {echo "default_path = '$PWD'" | awesome-client}
+dchroot()       {docker run --rm --privileged -ti $@ debian:stretch /bin/bash}
 
 # Usefull bindings
 bindkey "^[Od" backward-word
