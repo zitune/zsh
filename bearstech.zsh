@@ -1,6 +1,6 @@
 # Some exports
-export INFRA=/home/zitune/dev/bearstech/bearstech/infra
-export PATH=$INFRA/bin:$INFRA/../xen:$PATH
+export INFRA=/home/zitune/dev/bearstech/infra
+export PATH=$INFRA/bin:$PATH
 
 # Everyday aliases
 bt-alerts()     {ssh root@pidou monshow | grep -v "none$" | grep -v "^     " | grep -v "^$"}
@@ -12,9 +12,9 @@ bt-tickets()    {echo "Tickets:$(curl -s "https://maudin:$(/home/zitune/.scripts
 
 # Google Cloud
 # The next line updates PATH for the Google Cloud SDK.
-source '/home/zitune/dev/bearstech/google-cloud-sdk/path.zsh.inc'
+#source '/home/zitune/dev/bearstech/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
-source '/home/zitune/dev/bearstech/google-cloud-sdk/completion.zsh.inc'
+#source '/home/zitune/dev/bearstech/google-cloud-sdk/completion.zsh.inc'
 
 # OVH cloud
 nova-env()            {source $INFRA/cloud/ovh-$1.env}
