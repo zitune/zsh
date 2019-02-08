@@ -16,9 +16,9 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/z
 
   # personnal configuration
-  zgen load hybris42/zsh hybris.zsh
-  zgen load hybris42/zsh bearstech.zsh
-  zgen load hybris42/zsh hybris.theme
+  zgen load zitune/zsh zitune.zsh
+  zgen load zitune/zsh bearstech.zsh
+  zgen load zitune/zsh zitune.theme
 
   # generate the init script from plugins above
   zgen save

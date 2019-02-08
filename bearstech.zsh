@@ -1,5 +1,5 @@
 # Some exports
-export INFRA=/home/hybris/dev/bearstech/bearstech/infra
+export INFRA=/home/zitune/dev/bearstech/bearstech/infra
 export PATH=$INFRA/bin:$INFRA/../xen:$PATH
 
 # Everyday aliases
@@ -8,13 +8,13 @@ bt-dom0()       {awk '/Container:/{ print $2}' ${INFRA}/host/${1}}
 bt-each()       {$INFRA/bin/foreach $@}
 bt-host()       {cat $INFRA/host/$1}
 bt-release()    {ssh root@$1 cat /etc/debian_version}
-bt-tickets()    {echo "Tickets:$(curl -s "https://maudin:$(/home/hybris/.scripts/keepcli -p Dashbeard)@dashbeard.bearstech.com/api/dashbeard.txt")"}
+bt-tickets()    {echo "Tickets:$(curl -s "https://maudin:$(/home/zitune/.scripts/keepcli -p Dashbeard)@dashbeard.bearstech.com/api/dashbeard.txt")"}
 
 # Google Cloud
 # The next line updates PATH for the Google Cloud SDK.
-source '/home/hybris/dev/bearstech/google-cloud-sdk/path.zsh.inc'
+source '/home/zitune/dev/bearstech/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
-source '/home/hybris/dev/bearstech/google-cloud-sdk/completion.zsh.inc'
+source '/home/zitune/dev/bearstech/google-cloud-sdk/completion.zsh.inc'
 
 # OVH cloud
 nova-env()            {source $INFRA/cloud/ovh-$1.env}
