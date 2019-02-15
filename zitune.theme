@@ -1,6 +1,10 @@
-RPROMPT='%(?,%B%T%b,%{[31m%}%{[31m%}Err %?%{[0m%}) %K{black}%B%F{cyan}%m%f%b%k$(git_prompt_info)'
-PROMPT='%{[01m%}%(!,%{[31m%},%{[33m%})%35<...<%~%{[0m%} %# '
+RPROMPT='%(?,%B%T%b,%{[31m%}%{[31m%}Err %?%{[0m%}) %K{black}%B%f%b%k$(git_prompt_info)'
 
+if [[ -n $SSH_CONNECTION ]]; then
+   PROMPT='%{$fg_bold[cyan]%}%M %{[01m%}%(!,%{[31m%},%{[33m%})%35<...<%~%{[0m%} %# '
+else
+   PROMPT='%{[01m%}%(!,%{[31m%},%{[33m%})%35<...<%~%{[0m%} %# '
+fi
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[green]%}("
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[green]%})%{$fg_bold[red]%}!%{$reset_color%}"
