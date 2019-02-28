@@ -7,6 +7,7 @@ unsetopt share_history
 # ZINFRA like infra
 export ZINFRA=/home/zitune/dev/vexatil/infra
 export PATH=$ZINFRA/bin:$PATH
+export ZCOMP=/home/zitune/.z
 
 # Load keychain
 # keychain -q --agents ssh id_rsa id_dsa
@@ -65,5 +66,10 @@ export READNULLCMD=${PAGER:-/usr/bin/pager}
 export WATCH=all
 export WATCHFMT="%n has %a %l from %M"
 
+
+# Some completion functions
+_complete_z() {reply=($(cat $ZCOMP | cut -d "|" -f 1 |  xargs -n 1 -I @ sh -c 'echo `basename "@"`' basename))}
 # Some completions
 compctl -K _completemarks    j
+compctl -K _complete_z       _z
+compctl -K _complete_z       z
