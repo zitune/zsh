@@ -42,3 +42,15 @@ compctl -K _complete_allhost  bdebian
 compctl -K _complete_allhost  bssh
 compctl -K _complete_allhost  r
 
+#Git
+alias pull='git pull --rebase'
+alias push='git push'
+alias fetch='git fetch --all --tags'
+
+# Vagrant
+alias Vinit='vagrant snapshot restore init --provision --no-start; vagrant reload'
+
+
+# Registry
+alias bregistry='cat ~/.secret/registry.bearstech.com | docker login -u oandre@bearstech.com --password-stdin registry.bearstech.com'
+
