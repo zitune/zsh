@@ -48,7 +48,12 @@ alias push='git push'
 alias fetch='git fetch --all --tags'
 
 # Vagrant
-alias Vinit='vagrant snapshot restore init --provision --no-start; vagrant reload'
+alias Vinit='vagrant snapshot restore init --provision --no-start && vagrant reload'
+alias Vreset='vagrant destroy -f && vagrant up && vagrant snapshot save init -f && vagrant reload'
+
+# VFactory
+alias VFinit='Vinit && ./scripts/tools/ping_all_vagrant_once.sh && ./factory-cli vagrant deploy -vv site.yml'
+alias VFreset='Vreset && ./scripts/tools/ping_all_vagrant_once.sh && ./factory-cli vagrant deploy -vv site.yml'
 
 
 # Registry

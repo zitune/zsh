@@ -49,6 +49,7 @@ alias asmo='firejail --name=asmo --profile=/home/zitune/.config/firejail/asmo.pr
 alias controller1="sudo  xboxdrv  --silent --detach-kernel-driver -d  --mimic-xpad --led 1"
 alias controller2="sudo  xboxdrv  --silent --detach-kernel-driver -d  --mimic-xpad --led 2"
 
+alias e="emacsclient"
 
 
 
