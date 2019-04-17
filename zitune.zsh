@@ -5,8 +5,8 @@ function precmd() {echo -n -e "\a"}
 unsetopt share_history
 
 # ZINFRA like infra
-export ZINFRA=/home/zitune/dev/vexatil/infra
-export PATH=$ZINFRA/bin:$PATH
+export VINFRA=/home/zitune/dev/vexatil/infra
+export PATH=$VINFRA/bin:$PATH
 export ZCOMP=/home/zitune/.z
 
 # Load keychain
@@ -15,7 +15,6 @@ export ZCOMP=/home/zitune/.z
 # Everyday aliases
 c-cat()		{for a in $@; do colorize_via_pygmentize $a; done}
 c-less()	{for a in $@; do colorize_via_pygmentize $a | less; done}
-e()		{emacsclient -n $@ > /dev/null 2>&1}
 health()	{/usr/bin/screen -O -S health -c ~/.config/screen_health}
 j()		{if [ $# -eq 0 ]; then marks; else jump $@; fi}
 loop()		{while [ 1 ]; do sh -c "$@"; done}
